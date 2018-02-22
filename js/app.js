@@ -30,7 +30,7 @@ $(document).ready(function() {
     $weatherIcon.hide();
 
     $.ajax({
-      url: "http://api.openweathermap.org/data/2.5/weather?q=" + ciudad + ",es&appid=1ebe8fb6c5d2654d9ceb6e243540f115",
+      url: "https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + ",es&appid=1ebe8fb6c5d2654d9ceb6e243540f115",
       method: "GET",
       dataType: "JSON",
       beforeSend: function() {
