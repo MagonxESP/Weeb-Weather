@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: background-image 1s ease-in-out;
+	-webkit-transition: background-image 1s ease-in-out;
+	-moz-transition: background-image 1s ease-in-out;
+	-o-transition: background-image 1s ease-in-out;
+}
+
+h1 {
+	margin-bottom: 30px;
+}
+
+.statusContainer {
+	display: none;
+	text-align: center;
+}
+
+.flex-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.container-weather {
+	width: 960px;
+	text-shadow: 0px 0px 10px black;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+	border-bottom-style: solid;
+	border-bottom-width: 5px;
+	border-bottom-color: white;
+	padding-right: 80px;
+}
+
+.buscador {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	padding: 15px;
+}
+
+::placeholder {
+	color: Gainsboro;
+}
+
+.buscador input {
+	flex: 1;
+	height: 50px;
+	border: none;
+	font-size: 18px;
+	padding: 5px;
+	background: none;
+	outline: none;
+	color: white;
+}
+
+.tiempoContainer {
+	display: none;
+	animation: containerAnimation 1s linear;
+}
+
+.dato {weatherImg
+	margin-top: 10px;
+	font-size: 32px;
+}
+
+#temperatura {
+	font-size: 104px;
+}
+
+.temperatura::after {
+	content: ' ºC';
+}
+
+.temperaturaActual {
+	float: right;
+	padding: 15px;
+}
+
+.temperaturaActual * {
+	margin: 0;
+	align-self: center;
+}
+
+.temperaturaActual:first-child {
+	margin-right: 5px;
+}
+
+.temperaturaActual:last-child {
+	margin-left: 5px;
+}
+
+.masDatos {
+	list-style: none;
+}
+
+.masDatos li {
+	margin-bottom: 10px;
+}
+
+.masDatos li:last-child {
+	margin-bottom: 0px;
+}
+
+#windspeed::after {
+	content: ' Km/h';
+}
+
+#weatherImg {
+	float: left;
+	display: none;
+	position: relative;
+	z-index: 1;
+	width: 52%;
+}
+
+@keyframes containerAnimation {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
