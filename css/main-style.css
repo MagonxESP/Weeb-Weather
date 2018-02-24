@@ -144,3 +144,23 @@ h1 {
 		opacity: 1;
 	}
 }
+
+@media screen and (max-width: 850px) {
+	.container-weather {
+		width: 100%;
+	}
+
+	#weatherImg {
+		position: absolute;
+		float: none;
+		width: 50%;
+		bottom: 0;
+		left: 150px;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	#weatherImg {
+		width: 60%;
+	}
+}
