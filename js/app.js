@@ -69,6 +69,22 @@ function updateWeatherTick() {
   }, 600000);
 }
 
+function getLocation(position) {
+  var latitude = position.coords.latitude;
+  var longitude = position.coords.longitude;
+  requestUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=1ebe8fb6c5d2654d9ceb6e243540f115";
+
+  $.ajax({
+    url: requestUrl,
+    method: "GET",
+    dataType: "JSON",
+    success: function(data) {
+      printData(data);
+      updateWeatherTick();
+    }
+  });
+}
+
 $(document).ready(function() {
   $body = $('body');
   $tiempoContainer = $('.tiempoContainer');
@@ -96,6 +112,14 @@ $(document).ready(function() {
     $weatherIcon.hide();
     getWeather();
     $(this).val("");
+  });
+
+  $('#curr-location').on('click', function(){
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(getLocation);
+    } else {
+      alert("Este navegador no soporta la geolocalizacion");
+    }
   });
 
 });
