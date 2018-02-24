@@ -41,7 +41,6 @@ h1 {
 	border-bottom-style: solid;
 	border-bottom-width: 5px;
 	border-bottom-color: white;
-	padding-right: 80px;
 }
 
 .buscador {
@@ -51,12 +50,22 @@ h1 {
 	padding: 15px;
 }
 
+#curr-location {
+	flex: 1 0 5%;
+	align-self: center;
+	color: white;
+}
+
+#curr-location:hover {
+	text-shadow: 0px 0px 15px yellow;
+}
+
 ::placeholder {
 	color: Gainsboro;
 }
 
 .buscador input {
-	flex: 1;
+	flex: 1 0 95%;
 	height: 50px;
 	border: none;
 	font-size: 18px;
@@ -68,6 +77,7 @@ h1 {
 
 .tiempoContainer {
 	display: none;
+	padding: 20px;
 	animation: containerAnimation 1s linear;
 }
 
