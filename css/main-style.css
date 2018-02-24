@@ -160,6 +160,10 @@ h1 {
 }
 
 @media screen and (max-width: 380px) {
+	.flex-container {
+		align-content: flex-start;
+	}
+	
 	#weatherImg {
 		width: 60%;
 	}
